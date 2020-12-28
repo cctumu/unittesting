@@ -1,6 +1,7 @@
 import unittest
 
-from src.cal_math import cal_sin
+
+from src.cal_math import cal_sin, cal_square
 
 
 class MyTestCase(unittest.TestCase):
@@ -24,6 +25,11 @@ class MyTestCase(unittest.TestCase):
     def test_math(self):
         y = cal_sin(1.57079632729)
         self.assertAlmostEqual(y, 1)
+
+    def test_square(self):
+        y = cal_square(3)
+        self.assertEqual(y, 9)
+
 
 
 if __name__ == '__main__':
